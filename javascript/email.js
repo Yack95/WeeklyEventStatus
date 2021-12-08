@@ -73,7 +73,7 @@ function loadEvents(){
   var eventValues = eventDataSheet.getRange(2,1, eventDataSheet.getLastRow()-1, eventDataSheet.getLastColumn()).getDisplayValues();
   
   var apms = loadAPM()
-  //var ars = loadAR()
+  var ars = loadAR()
 
   var events = eventValues.map((row)=>{
    var event = {
@@ -88,7 +88,7 @@ function loadEvents(){
       relevance:row[8],
       weeksToEvent:row[9],
       apms:apms[row[0]] || [],
-      //ars:ars[row[0]] || [],
+      ars:ars[row[0]] || [],
     }
     //console.log("return",events)
     return event     
@@ -101,7 +101,7 @@ function loadAPM(){
 
   var apmDataSheet = SpreadsheetApp.getActive().getSheetByName("DataAPMTrackings");
   var apmValues = apmDataSheet.getRange(2,1,apmDataSheet.getLastRow()-1,apmDataSheet.getLastColumn()).getDisplayValues();
-  console.log("apm values", apmValues)
+  //console.log("apm values", apmValues)
 
   var apms = apmValues.map((row)=>{
     
@@ -112,7 +112,7 @@ function loadAPM(){
     return apm;
   })
   
-  console.log("apms", apms)
+  //console.log("apms", apms)
   const grouppedAPM = {}
   
   apms.forEach((apm)=>{
@@ -123,16 +123,16 @@ function loadAPM(){
   
   }
   })
-  console.log("grouppedAPM", grouppedAPM)
+  //console.log("grouppedAPM", grouppedAPM)
   return grouppedAPM
 }
 
 
-/*
 function loadAR(){
 
   var arDataSheet = SpreadsheetApp.getActive().getSheetByName("DataARTrackings");
   var arValues = arDataSheet.getRange(2,1,arDataSheet.getLastRow()-1,arDataSheet.getLastColumn()).getDisplayValues();
+  //console.log("ar values", arValues)
 
   var ars = arValues.map((row)=>{
     var ar = {
@@ -141,23 +141,16 @@ function loadAR(){
     }
     return ar
   })
+  //console.log("ars", ars)
   const grouppedAR = {}
  
   ars.forEach((ar)=>{
-   
-   //or there is already an array of events for that ar
-  
    if(grouppedAR[ar.eventId]){
-    
     grouppedAR[ar.eventId].push(ar)
-   
   }else{
-    //or we have only the first event
     grouppedAR[ar.eventId] = [ar]
   }             
   })
-  
-  //console.log("Groupped ar", grouppedAR)
+  //console.log("grouppedAR", grouppedAR)
   return grouppedAR
 }
-*/

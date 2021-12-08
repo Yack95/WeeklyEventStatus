@@ -77,58 +77,59 @@
                                                    <!--Dynamic-->
                                                     <? events.forEach((event) =>{
                                                         var eventId = event.eventId;
-                                                        if (event.weeksToEvent === "Past"){ ?>
-                                                        <? event.ars.forEach((ar) =>{ 
-                                                            if (eventId === ar.eventId){ ?>  
-                                                        <? event.apms.forEach((apm) =>{ 
+                                                      if (event.weeksToEvent === "Past"){ ?>
+                                                      <? event.apms.forEach((apm) =>{ 
                                                             if (eventId === apm.eventId){ ?>
-                                                            <tr>
-                                                                <td valign="top" style=" padding: 3px 3px; border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
-                                                                    <!--Event Date-->
-                                                                    <?= event.startDate ?>
-                                                                    <p style="margin-top: 0; margin-bottom: 0;"></p>
-                                                                </td>        
-                                                                <td valign="top" style=" padding: 3px 3px; border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
-                                                                    <!--Weeks to Event-->
-                                                                    <?=event.weeksToEvent ?>
-                                                                    <p style="margin-top: 0; margin-bottom: 0;"></p>
-                                                                </td>
-                                                                <td valign="top" style=" padding: 3px 3px; border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
-                                                                    <!--Event Name-->
-                                                                    <?= event.eventName ?>
-                                                                    <p style="margin-top: 0; margin-bottom: 0;"></p>
-                                                                </td>
-                                                                <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
-                                                                    <!--POC-->
-                                                                    <?= event.eventPOC ?>
-                                                                </td>
-                                                                <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
-                                                                    <!--Audience-->
-                                                                    <?= event.targetAudience ?>
-                                                                </td>
-                                                                <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
-                                                                    <!--PGA | MO-->
-                                                                    <?= event.productFocus ?>&nbsp;|&nbsp;<?= event.marketingObjectives ?>
-                                                                </td>
-                                                                <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
-                                                                    <!--APM Status-->
-                                                                    <?= apm.status ?>
-                                                                </td>
-                                                                <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
-                                                                    <!--Reporting Date-->
-                                                                    <?= ar.status ?>
-                                                                </td>
-                                                                <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
-                                                                    <!--Reporting Status-->
-                                                                    <?= ar.eventId ?>
-                                                                </td>
-                                                                <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
-                                                                    <!--Reporting URL -->
-                                                                    <?= ar.eventId ?>
-                                                                </td>                                                        
-                                                            </tr>
-                                                        <? }}) ?>
-                                                        <? }}) ?>
+                                                       
+                                                     <tr>
+                                                        <td valign="top" style=" padding: 3px 3px; border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
+                                                            <!--Event Date-->
+                                                            <?= event.startDate ?>
+                                                            <p style="margin-top: 0; margin-bottom: 0;"></p>
+                                                        </td>        
+                                                        <td valign="top" style=" padding: 3px 3px; border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
+                                                            <!--Weeks to Event-->
+                                                            <?=event.weeksToEvent ?>
+                                                            <p style="margin-top: 0; margin-bottom: 0;"></p>
+                                                        </td>
+                                                        <td valign="top" style=" padding: 3px 3px; border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
+                                                            <!--Event Name-->
+                                                            <?= event.eventName ?>
+                                                            <p style="margin-top: 0; margin-bottom: 0;"></p>
+                                                        </td>
+                                                        <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
+                                                            <!--POC-->
+                                                            <?= event.eventPOC ?>
+                                                        </td>
+                                                        <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
+                                                            <!--Audience-->
+                                                            <?= event.targetAudience ?>
+                                                        </td>
+                                                        <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
+                                                            <!--PGA | MO-->
+                                                            <?= event.productFocus ?>&nbsp;|&nbsp;<?= event.marketingObjectives ?>
+                                                        </td>
+                                                        <!--APM & AR-->
+                                                        
+                                                        <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
+                                                            <!--APM Status-->
+                                                            <?= apm.status ?>
+                                                        </td>
+                                                        <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
+                                                            <!--Reporting Date-->
+                                                           <?= apm.status ?>
+                                                        </td>
+                                                        <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
+                                                            <!--Reporting Status-->
+                                                           <?= apm.status ?>
+                                                        </td>
+                                                        <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
+                                                            <!--Reporting URL -->
+                                                           <?= apm.status ?>
+                                                        </td>
+                                                  
+                                                    </tr>
+                                                     <? }}) ?>
                                                     <? }}) ?>
                                                 </tbody>
                                             </table>
@@ -187,62 +188,44 @@
                                         <p style="margin-top: 0; margin-bottom: 0;">Reporting Status</p>
                                     </th>
                                 </tr>
-                                <!--Dynamic-->
-                                <? events.forEach((event) =>{
-                                    var eventId = event.eventId;
-                                    if (event.weeksToEvent === "Past"){ ?>
-                                    <? event.ars.forEach((ar) =>{ 
-                                        if (eventId === ar.eventId){ ?>    
-                                    <? event.apms.forEach((apm) =>{ 
-                                        if (eventId === apm.eventId){ ?>
-                                        <tr>
-                                            <td valign="top" style=" padding: 3px 3px; border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
-                                                <!--Event Date-->
-                                                <?= event.startDate ?>
-                                                <p style="margin-top: 0; margin-bottom: 0;"></p>
-                                            </td>        
-                                            <td valign="top" style=" padding: 3px 3px; border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
-                                                <!--Weeks to Event-->
-                                                <?=event.weeksToEvent ?>
-                                                <p style="margin-top: 0; margin-bottom: 0;"></p>
-                                            </td>
-                                            <td valign="top" style=" padding: 3px 3px; border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
-                                                <!--Event Name-->
-                                                <?= event.eventName ?>
-                                                <p style="margin-top: 0; margin-bottom: 0;"></p>
-                                            </td>
-                                            <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
-                                                <!--POC-->
-                                                <?= event.eventPOC ?>
-                                            </td>
-                                            <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
-                                                <!--Audience-->
-                                                <?= event.targetAudience ?>
-                                            </td>
-                                            <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
-                                                <!--Agency Briefing-->
-                                                <?= event.briefingLocal ?><br><?= event.relevance ?>
-                                            </td>
-                                            <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
-                                                <!--Nom. URL-->
-                                                <?=event.relevance ?>
-                                            </td>
-                                            <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
-                                                <!--Invite Date-->
-                                                <?=event.relevance ?>
-                                            </td>
-                                            <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
-                                                <!--APM Status-->
-                                                <?=apm.status ?>
-                                            </td>
-                                            <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
-                                                <!--Reporting Status-->
-                                                <?=ar.status ?>
-                                            </td>
-                                        </tr>
-                                    <? }}) ?>
-                                    <? }}) ?>
-                                <? }}) ?>
+                                <tr>
+                                    <td valign="top" style=" padding: 3px 3px; border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
+                                        10.11.2021
+                                        <p style="margin-top: 0; margin-bottom: 0;"></p>
+                                    </td>
+                                    <td valign="top" style=" padding: 3px 3px; border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
+                                        0
+                                        <p style="margin-top: 0; margin-bottom: 0;"></p>
+                                    </td>
+                                    <td valign="top" style=" padding: 3px 3px; border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
+                                        Google Startup Day
+                                        <p style="margin-top: 0; margin-bottom: 0;"></p>
+                                    </td>
+                                    <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
+                                        anabelo@
+                                    </td>
+                                    <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
+                                        Senior Management (Decision Maker), Middle Management (Influencer), Day-to-Day (Practitioner)
+                                    </td>
+                                    <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
+                                        LAC:N/A iG:No
+                                    </td>
+                                    <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
+                                        
+                                    </td>
+                                    <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
+                                        
+                                    </td>
+                                    <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
+                                        
+                                    </td>
+                                    <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
+                                        
+                                    </td>
+                                    <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
+                                        Planned
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
