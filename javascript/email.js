@@ -5,7 +5,7 @@ function doGet() {
   var receivers = sheetInvitees.getSheetByName("SendInvitation");
   var receiverRange = receivers.getRange(2,1, receivers.getLastRow()-1, 1).getValues();
  
-  var receiverName = "Name"
+  var receiverName = 0
  
   var subject = "The last update Weekly Event Status"
   
