@@ -78,6 +78,9 @@
                                                     <? events.forEach((event) =>{
                                                         var eventId = event.eventId;
                                                       if (event.weeksToEvent === "Past"){ ?>
+                                                      <? event.apms.forEach((apm) =>{ 
+                                                            if (eventId === apm.eventId){ ?>
+                                                       
                                                      <tr>
                                                         <td valign="top" style=" padding: 3px 3px; border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
                                                             <!--Event Date-->
@@ -107,8 +110,7 @@
                                                             <?= event.productFocus ?>&nbsp;|&nbsp;<?= event.marketingObjectives ?>
                                                         </td>
                                                         <!--APM & AR-->
-                                                        <? apms.forEach((apm) =>{ 
-                                                            if (eventId === apm.eventId){ ?>
+                                                        
                                                         <td valign="top" style=" border-bottom: 1px solid #ced4da; vertical-align: top; box-sizing: border-box; position: relative; font-size: 14px; text-align: left; ">
                                                             <!--APM Status-->
                                                             <?= apm.status ?>
@@ -125,8 +127,9 @@
                                                             <!--Reporting URL -->
                                                            <?= apm.status ?>
                                                         </td>
-                                                        <? }}) ?>
+                                                  
                                                     </tr>
+                                                     <? }}) ?>
                                                     <? }}) ?>
                                                 </tbody>
                                             </table>

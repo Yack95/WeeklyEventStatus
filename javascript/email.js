@@ -44,11 +44,17 @@ function sendTableByEmail(){
     var subject = "The last update Weekly Event Status"
   
     receiverRange.forEach((row) => {
+                          
       var htmlOutput = HtmlService.createTemplateFromFile("TableDesign/table")
+    
       var events = loadEvents()
+      
       htmlOutput.events = events
+      
       htmlOutput.fn = row[receiverName];
+      
       const emailTemplate = htmlOutput.evaluate().getContent();
+      
       GmailApp.sendEmail(
         row[receiverEmail],
         subject,
@@ -95,16 +101,33 @@ function loadAPM(){
 
   var apmDataSheet = SpreadsheetApp.getActive().getSheetByName("DataAPMTrackings");
   var apmValues = apmDataSheet.getRange(2,1,apmDataSheet.getLastRow()-1,apmDataSheet.getLastColumn()).getDisplayValues();
+  console.log("apm values", apmValues)
 
   var apms = apmValues.map((row)=>{
+    
     var apm = {
       eventId:row[0],
       status:row[1],
     }
-    return apm
+    return apm;
   })
-  return apms 
+  
+  console.log("apms", apms)
+  const grouppedAPM = {}
+  
+  apms.forEach((apm)=>{
+  if(grouppedAPM[apm.eventId]){
+      grouppedAPM[apm.eventId].push(apm)
+  }else{
+      grouppedAPM[apm.eventId] = [apm]
+  
+  }
+  })
+  console.log("grouppedAPM", grouppedAPM)
+  return grouppedAPM
 }
+
+
 /*
 function loadAR(){
 
